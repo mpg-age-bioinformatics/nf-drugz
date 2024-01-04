@@ -50,7 +50,7 @@ process prodrugz {
     """
     if [[ "${paired}" == "paired" ]] ; then paired="" ; else paired="-unpaired" ; fi
 
-    python3 /drugz/drugz.py -i ${params.ouput_mageck_count}/counts.count.txt -o ${params.output_drugz}/${label}.txt -c ${control} -x ${treatment} \${paired}
+    python3 /drugz/drugz.py -i ${params.output_mageck_count}/counts.count.txt -o ${params.output_drugz}/${label}.txt -c ${control} -x ${treatment} \${paired}
     """
 }
 
